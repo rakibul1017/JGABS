@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JGABS - Issues</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Inline Styles -->
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f9fafb;
+      color: #1f2937;
+    }
+
+    nav {
+      background: #1e3a8a;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    nav h1 {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+
+    .tab-btn {
+      padding: 0.75rem 1.5rem;
+      margin: 0 0.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      background: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .tab-btn.active {
+      background: #1e3a8a;
+      color: white;
+    }
+
+    .tab-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1rem;
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .article {
+      background: white;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .article h3 {
+      color: #1e3a8a;
+      margin-bottom: 0.5rem;
+    }
+
+    .article button {
+      margin-right: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 0.3rem;
+      cursor: pointer;
+    }
+
+    .filters {
+      margin-bottom: 1rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .filters select {
+      padding: 0.5rem;
+      border-radius: 0.3rem;
+      border: 1px solid #d1d5db;
+    }
+
+    footer {
+      background: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h1>JGABS</h1>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="issues.html">Issues</a>
+      <a href="archives.html">Archives</a>
+      <a href="submission.html">Submissions</a>
+      <a href="about.html">About</a>
+      <a href="editorial-board.html">Editorial Board</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Issues</h2>
+    <p>JGABS publishes two issues a year (March & September). Browse below.</p>
+  </section>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="latest">Latest Issue</button>
+    <button class="tab-btn" data-tab="all">All Issues</button>
+  </div>
+
+  <!-- Tab Content: Latest Issue -->
+  <div id="latest" class="tab-content active">
+    <div class="article">
+      <h3>Article 1: The Role of Arts in Business Innovation</h3>
+      <p><strong>Author:</strong> Jane Doe</p>
+      <button onclick="viewArticle('arts-business.pdf')">View</button>
+      <button onclick="downloadArticle('arts-business.pdf')">Download</button>
+    </div>
+    <div class="article">
+      <h3>Article 2: Cultural Influence on Global Marketing</h3>
+      <p><strong>Author:</strong> John Smith</p>
+      <button onclick="viewArticle('global-marketing.pdf')">View</button>
+      <button onclick="downloadArticle('global-marketing.pdf')">Download</button>
+    </div>
+  </div>
+
+  <!-- Tab Content: All Issues -->
+  <div id="all" class="tab-content">
+    <div class="filters">
+      <label>Volume:
+        <select id="volumeFilter">
+          <option value="2026">2026 - Volume 1</option>
+          <option value="2025">2025 - Volume 1</option>
+        </select>
+      </label>
+      <label>Issue:
+        <select id="issueFilter">
+          <option value="1">Issue 1 (March)</option>
+          <option value="2">Issue 2 (September)</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="article">
+      <h3>Sample Article: Business Sustainability Practices</h3>
+      <p><strong>Author:</strong> Alice Johnson</p>
+      <button onclick="viewArticle('sustainability.pdf')">View</button>
+      <button onclick="downloadArticle('sustainability.pdf')">Download</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Journal of Global Arts, Business and Sciences (JGABS).
+  </footer>
+
+  <!-- Inline Script -->
+  <script>
+    // Tab switching
+    const tabs = document.querySelectorAll(".tab-btn");
+    const contents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
+        contents.forEach(c => c.classList.remove("active"));
+
+        tab.classList.add("active");
+        document.getElementById(tab.dataset.tab).classList.add("active");
+      });
+    });
+
+    // Dummy actions for view/download
+    function viewArticle(file) {
+      alert("Viewing " + file + " (replace with PDF viewer).");
+    }
+
+    function downloadArticle(file) {
+      alert("Downloading " + file + " (replace with real download).");
+    }
+  </script>
+</body>
+</html>

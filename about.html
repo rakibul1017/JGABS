@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - JGABS</title>
+  <style>
+        /* General Reset */
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+    background: #1a1a1a;
+    color: #f5f5f5;
+    line-height: 1.7;
+    }
+
+    /* Header */
+    .header {
+    background: #222;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    .logo {
+    font-weight: bold;
+    font-size: 22px;
+    color: #ffcc00;
+    }
+
+    .navbar a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #f5f5f5;
+    transition: 0.3s;
+    }
+
+    .navbar a:hover {
+    color: #ffcc00;
+    }
+
+    .navbar a.active {
+    color: #ffcc00;
+    font-weight: bold;
+    }
+
+    /* Hero */
+    .hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #333, #111);
+    }
+
+    .hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    }
+
+    .hero p {
+    font-size: 18px;
+    color: #ccc;
+    }
+
+    /* Content */
+    .content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    }
+
+    .about-section {
+    margin-bottom: 40px;
+    }
+
+    .about-section h2 {
+    font-size: 24px;
+    color: #ffcc00;
+    margin-bottom: 15px;
+    }
+
+    .about-section p,
+    .about-section ul {
+    font-size: 16px;
+    color: #ddd;
+    }
+
+    .about-section ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    }
+
+    .about-section li {
+    margin-bottom: 8px;
+    }
+
+    /* Footer */
+    .footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: #aaa;
+    font-size: 14px;
+    }
+  </style>
+  
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">JGABS</div>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="issues.html">Issues</a>
+      <a href="archives.html">Archives</a>
+      <a href="submission.html">Submissions</a>
+      <a href="about.html" class="active">About</a>
+      <a href="editorial-board.html">Editorial Board</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>About the Journal</h1>
+    <p>Journal of Global Arts, Business and Sciences (JGABS)</p>
+  </section>
+
+  <!-- About Content -->
+  <main class="content">
+    <section class="about-section">
+      <h2>Overview</h2>
+      <p>
+        The <strong>Journal of Global Arts, Business and Sciences (JGABS)</strong> 
+        is an international, peer-reviewed, and open-access journal 
+        committed to advancing scholarly research in the fields of 
+        arts, business, and sciences. It is published twice a year 
+        (March & September).
+      </p>
+    </section>
+
+    <section class="about-section">
+      <h2>Aims and Scope</h2>
+      <p>
+        JGABS seeks to promote interdisciplinary knowledge by publishing 
+        original research articles, reviews, and case studies that address 
+        contemporary issues and innovations across disciplines. Topics 
+        covered include, but are not limited to:
+      </p>
+      <ul>
+        <li>Arts, literature, and cultural studies</li>
+        <li>Business, management, and economics</li>
+        <li>Science, technology, and applied innovations</li>
+        <li>Education, linguistics, and social sciences</li>
+      </ul>
+    </section>
+
+    <section class="about-section">
+      <h2>Publication Ethics</h2>
+      <p>
+        JGABS upholds the highest standards of academic integrity. 
+        We strictly follow ethical guidelines for authors, editors, 
+        and reviewers, ensuring transparency, originality, and academic 
+        honesty in every publication.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <h2>Open Access Policy</h2>
+      <p>
+        All articles published in JGABS are freely accessible online, 
+        ensuring knowledge dissemination without barriers. Authors retain 
+        copyright under the Creative Commons Attribution License.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Journal of Global Arts, Business and Sciences (JGABS). All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Highlight current nav link dynamically
+    document.addEventListener("DOMContentLoaded", () => {
+     const links = document.querySelectorAll(".navbar a");
+    links.forEach(link => {
+        if (link.href === window.location.href) {
+           link.classList.add("active");
+          }
+        });
+    });
+
+  </script>
+</body>
+</html>
