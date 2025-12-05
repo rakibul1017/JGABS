@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Contact - JGABS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <a class="logo" href="index.html">JGABS</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="issues.html">Issues</a></li>
+          <li><a href="archives.html">Archives</a></li>
+          <li><a href="submission.html">Submission</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="editorial-board.html">Editorial Board</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Contact Us</h1>
+    <p>For submissions, enquiries, or business, contact the editorial office below.</p>
+
+    <div style="max-width:900px;margin:0 auto;">
+      <div class="card" style="margin-bottom:18px;">
+        <h3>Editorial Office</h3>
+        <p>4R Academic Publishing</p>
+        <p>Email: <a href="mailto:editor@jgabs.org">editor@jgabs.org</a></p>
+        <p>Location: Malaysia / Bangladesh</p>
+      </div>
+
+      <form id="contactForm" class="contact-form">
+        <div class="form-row">
+          <label for="cname">Name</label>
+          <input id="cname" name="name" type="text" required />
+        </div>
+        <div class="form-row">
+          <label for="cemail">Email</label>
+          <input id="cemail" name="email" type="email" required />
+        </div>
+        <div class="form-row">
+          <label for="cmessage">Message</label>
+          <textarea id="cmessage" name="message" required></textarea>
+        </div>
+        <button class="primary" type="submit">Send Message</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Journal of Global Arts, Business and Sciences (JGABS)</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JGABS - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Inline Styles -->
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9fafb;
+      color: #1f2937;
+    }
+
+    /* Navbar */
+    nav {
+      background: #1e3a8a;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    nav h1 {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Features */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #1e3a8a;
+    }
+
+    .feature-card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #374151;
+    }
+
+    /* Footer */
+    footer {
+      background: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>JGABS</h1>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="issues.html">Issues</a>
+      <a href="archives.html">Archives</a>
+      <a href="submissions.html">Submissions</a>
+      <a href="about.html">About</a>
+      <a href="editorial-board.html">Editorial Board</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Journal of Global Arts, Business and Sciences</h2>
+    <p>International, peer-reviewed, open access. Publishing biannually (March & September).</p>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="feature-card">
+      <h3>Peer-Reviewed</h3>
+      <p>All articles undergo a strict peer-review process to ensure quality and originality.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Open Access</h3>
+      <p>We provide free access to research so knowledge is available for everyone.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Global Reach</h3>
+      <p>Authors and readers from across the globe contribute to and benefit from our work.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Journal of Global Arts, Business and Sciences (JGABS). All rights reserved.
+  </footer>
+
+  <!-- Inline Script -->
+  <script>
+    // Example: small welcome message
+    document.addEventListener("DOMContentLoaded", () => {
+      console.log("Welcome to JGABS Home Page");
+    });
+  </script>
+</body>
+</html>

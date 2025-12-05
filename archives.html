@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JGABS - Archives</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Inline Styles -->
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f9fafb;
+      color: #1f2937;
+    }
+
+    nav {
+      background: #1e3a8a;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    nav h1 {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .archives-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .archive-year {
+      margin-bottom: 2rem;
+    }
+
+    .archive-year h3 {
+      color: #1e3a8a;
+      margin-bottom: 1rem;
+    }
+
+    .archive-issue {
+      background: white;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .archive-issue h4 {
+      margin: 0 0 0.5rem;
+    }
+
+    .archive-issue button {
+      margin-right: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 0.3rem;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h1>JGABS</h1>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="issues.html">Issues</a>
+      <a href="archives.html">Archives</a>
+      <a href="submissions.html">Submissions</a>
+      <a href="about.html">About</a>
+      <a href="editorial-board.html">Editorial Board</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Archives</h2>
+    <p>Explore past issues of JGABS organized by year and volume.</p>
+  </section>
+
+  <!-- Archives Content -->
+  <div class="archives-container">
+    <div class="archive-year">
+      <h3>2026 - Volume 1</h3>
+      <div class="archive-issue">
+        <h4>Issue 1 (March 2026)</h4>
+        <p>Special Issue on Arts & Business Integration</p>
+        <button onclick="viewIssue('2026-1.pdf')">View</button>
+        <button onclick="downloadIssue('2026-1.pdf')">Download</button>
+      </div>
+      <div class="archive-issue">
+        <h4>Issue 2 (September 2026)</h4>
+        <p>Global Perspectives in Cultural Studies</p>
+        <button onclick="viewIssue('2026-2.pdf')">View</button>
+        <button onclick="downloadIssue('2026-2.pdf')">Download</button>
+      </div>
+    </div>
+
+    <div class="archive-year">
+      <h3>2025 - Volume 1</h3>
+      <div class="archive-issue">
+        <h4>Issue 1 (March 2025)</h4>
+        <p>Business and Arts in Emerging Economies</p>
+        <button onclick="viewIssue('2025-1.pdf')">View</button>
+        <button onclick="downloadIssue('2025-1.pdf')">Download</button>
+      </div>
+      <div class="archive-issue">
+        <h4>Issue 2 (September 2025)</h4>
+        <p>Cross-Cultural Communication in Business</p>
+        <button onclick="viewIssue('2025-2.pdf')">View</button>
+        <button onclick="downloadIssue('2025-2.pdf')">Download</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Journal of Global Arts, Business and Sciences (JGABS).
+  </footer>
+
+  <!-- Inline Script -->
+  <script>
+    function viewIssue(file) {
+      alert("Viewing " + file + " (replace with embedded PDF viewer).");
+    }
+
+    function downloadIssue(file) {
+      alert("Downloading " + file + " (replace with real download).");
+    }
+  </script>
+</body>
+</html>
